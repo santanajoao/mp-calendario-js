@@ -10,7 +10,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main>
+        <h1>Calendário</h1>
+
+        <article class="calendar-section">
+          <label class="language-select__label">
+            Selecione uma linguagem
+
+            <select class="language-select">
+              <option value="">Português</option>
+              <option value="">Inglês</option>
+            </select>
+          </label>
+
+          <article class="calendar">
+            <div class="calendar__top">
+              <button
+                class="top__button"
+                aria-label="Ir para o mês anterior"
+                title="Mês anterior"
+              >
+                <img src="assets/left-arrow.svg" class="top__button-image" alt="Seta apontada para esquerda">
+              </button>
+
+              <p class="calendar__month-year">
+                <span class="calendar__month">agosto</span>
+                <span class="calendar__year">2023</span>
+              </p>
+
+              <button 
+                class="top__button"
+                title="Próximo mês"
+                aria-label="Ir para o próximo mês"
+              >
+                <img src="assets/right-arrow.svg" class="top__button-image" alt="Seta apontada para direita">
+              </button>
+            </div>
+
+            <div class="calendar__day-names">
+              <span class="calendar__day-name">Dom.</span>
+              <span class="calendar__day-name">Seg.</span>
+              <span class="calendar__day-name">Ter.</span>
+              <span class="calendar__day-name">Qua.</span>
+              <span class="calendar__day-name">Qui.</span>
+              <span class="calendar__day-name">Sex.</span>
+              <span class="calendar__day-name">Sab.</span>
+            </div>
+
+            <div class="calendar__days-grid">
+              <span class="calendar__day">1</span>
+              <span class="calendar__day">2</span>
+              <span class="calendar__day">3</span>
+              <span class="calendar__day">4</span>
+              <span class="calendar__day">5</span>
+              <span class="calendar__day">6</span>
+              <span class="calendar__day">7</span>
+              <span class="calendar__day">8</span>
+              <span class="calendar__day">9</span>
+              <span class="calendar__day">10</span>
+              <span class="calendar__day">11</span>
+              <span class="calendar__day">12</span>
+              <span class="calendar__day">13</span>
+              <span class="calendar__day">14</span>
+              <span class="calendar__day">15</span>
+              <span class="calendar__day">16</span>
+              <span class="calendar__day">17</span>
+              <span class="calendar__day">18</span>
+              <span class="calendar__day">19</span>
+              <span class="calendar__day">20</span>
+              <span class="calendar__day">21</span>
+              <span class="calendar__day">22</span>
+              <span class="calendar__day">23</span>
+              <span class="calendar__day">24</span>
+              <span class="calendar__day">25</span>
+              <span class="calendar__day">26</span>
+              <span class="calendar__day">27</span>
+              <span class="calendar__day">28</span>
+              <span class="calendar__day">29</span>
+              <span class="calendar__day">30</span>
+              <span class="calendar__day">31</span>
+              <span class="calendar__day">32</span>
+              <span class="calendar__day">33</span>
+              <span class="calendar__day">34</span>
+              <span class="calendar__day">35</span>
+            </div>
+          </article>
+        </article>
+      </main>
+    </div>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
