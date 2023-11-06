@@ -3,8 +3,6 @@ import {
   weekDayNamesContainer, calendarMonth, calendarYear, monthDaysContainer,
 } from './elements';
 
-const todaysDate = new Date();
-
 function renderWeekDayNames(locale) {
   weekDayNamesContainer.textContent = '';
 
@@ -35,6 +33,7 @@ function renderDayNames(date, locale) {
 function renderMonthDays(date) {
   monthDaysContainer.textContent = '';
 
+  const todaysDate = new Date();
   const isSameMonth = date.toString() === todaysDate.toString();
   const monthDays = getMonthDays(date);
 
