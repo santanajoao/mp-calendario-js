@@ -37,7 +37,6 @@ function renderMonthDays(date) {
 
   const isSameMonth = date.toString() === todaysDate.toString();
   const monthDays = getMonthDays(date);
-  console.log(monthDays);
 
   monthDays.forEach((day) => {
     const div = document.createElement('div');
