@@ -1,7 +1,7 @@
 import '../style.css';
 import '../styles/calendar.css';
 import { renderLanguageOptions } from './language';
-import { renderCalendar, updateLocale, updateCalendar } from './calendar';
+import { renderCalendar, updateLocale, updateMonth } from './calendar';
 import { languageSelect, prevMonthButton, nextMonthButton } from './elements';
 
 const currentDate = new Date();
@@ -14,12 +14,12 @@ languageSelect.addEventListener('change', () => {
 
 prevMonthButton.addEventListener('click', () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
-  updateCalendar(currentDate, selectedLocale);
+  updateMonth(currentDate, selectedLocale);
 });
 
 nextMonthButton.addEventListener('click', () => {
   currentDate.setMonth(currentDate.getMonth() + 1);
-  updateCalendar(currentDate, selectedLocale);
+  updateMonth(currentDate, selectedLocale);
 });
 
 renderLanguageOptions();

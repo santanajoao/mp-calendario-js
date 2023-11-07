@@ -34,14 +34,16 @@ function renderMonthDays(date) {
   monthDaysContainer.textContent = '';
 
   const todaysDate = new Date();
-  const isSameMonth = date.toString() === todaysDate.toString();
   const monthDays = getMonthDays(date);
+
+  const isSameMonth = date.getMonth() === todaysDate.getMonth();
+  const isSameYear = date.getFullYear() === todaysDate.getFullYear();
 
   monthDays.forEach((day) => {
     const div = document.createElement('div');
     div.classList.add('calendar__day');
 
-    if (isSameMonth && day === todaysDate.getDate()) {
+    if (isSameMonth && isSameYear && day === todaysDate.getDate()) {
       div.classList.add('calendar__day--today');
     }
 
@@ -50,7 +52,7 @@ function renderMonthDays(date) {
   });
 }
 
-export function updateCalendar(date, locale) {
+export function updateMonth(date, locale) {
   renderMonthName(date, locale);
   renderYear(date);
   renderMonthDays(date);
